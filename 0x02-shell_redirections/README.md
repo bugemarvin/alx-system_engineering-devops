@@ -6,5 +6,4 @@
 > Answer:``<br>
 
 > 1. Write a script that displays a confused smiley "(Ôo)'.<br>
-> Answer:``<br>
-
+> Answer:` `<br>
