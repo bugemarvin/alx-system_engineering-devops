@@ -1,12 +1,15 @@
-0-hello_world
-1-confused_smiley
-2-hellofile
-3-twofiles
-4-lastlines
-5-firstlines
-6-third_line
-7-file
-8-cwd_state
-iacta
-ls_cwd_content
-README.md
+total 52
+drwxrwxr-x 2 sparebooker sparebooker 4096 Elb  5 01:59 .
+drwxrwxr-x 6 sparebooker sparebooker 4096 Elb  4 20:27 ..
+-rwxrwxr-x 1 sparebooker sparebooker   32 Elb  4 23:41 0-hello_world
+-rwxrw-r-- 1 sparebooker sparebooker   29 Elb  5 00:25 1-confused_smiley
+-rwxrw-r-- 1 sparebooker sparebooker   28 Elb  5 00:37 2-hellofile
+-rwxrw-r-- 1 sparebooker sparebooker   39 Elb  5 00:43 3-twofiles
+-rwxrw-r-- 1 sparebooker sparebooker   33 Elb  5 00:48 4-lastlines
+-rwxrw-r-- 1 sparebooker sparebooker   33 Elb  5 00:54 5-firstlines
+-rwxrw-r-- 1 sparebooker sparebooker   38 Elb  5 01:16 6-third_line
+-rwxrw-r-- 1 sparebooker sparebooker   74 Elb  5 01:53 7-file
+-rwxrw-r-- 1 sparebooker sparebooker   36 Elb  5 02:09 8-cwd_state
+-rw-rw-r-- 1 sparebooker sparebooker  915 Elb  5 01:02 iacta
+-rw-rw-r-- 1 sparebooker sparebooker    0 Elb  5 02:09 ls_cwd_content
+-rw-rw-r-- 1 sparebooker sparebooker  308 Elb  4 23:20 README.md
