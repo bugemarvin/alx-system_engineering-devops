@@ -1,2 +1,2 @@
 #!/bin/bash
-find . -type d -name "*." | ls -lRa  
+find . -type d -not '.' | wc -l  
