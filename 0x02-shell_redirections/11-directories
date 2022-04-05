@@ -1,2 +1,2 @@
 #!/bin/bash
-find . -type d -name "." | ls -la  
+find . -type d -not "." | ls -lRa  
