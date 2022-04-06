@@ -1,2 +1,2 @@
 #!/bin/bash
-find . -mindepth 0 | ls -la
+find . -empty | rev | cut -d/ -f1 | rev
