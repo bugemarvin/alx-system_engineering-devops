@@ -1,2 +1,2 @@
 #!/bin/bash
-ls -tl | head -n 10
+find . -type f -anewer | head -n 10
