@@ -8,4 +8,5 @@ while [ a>0 ]
 do
 	echo "To infinity and beyond"
 	(( a++ ))
+	sleep 2
 done
