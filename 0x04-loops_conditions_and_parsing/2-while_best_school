@@ -1,10 +1,9 @@
 #!/usr/bin/env bash
 #Bash script that displays Best School 10 times using while loop
 
-STRING="$(echo 'Best School')"
 I=0
 while [ $I -lt 10 ]
 do
-	echo "$STRING"
+	echo "Best School"
 	I=$(( I+1 ))
 done
