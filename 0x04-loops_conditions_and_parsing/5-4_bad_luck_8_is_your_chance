@@ -7,11 +7,11 @@ do
 	if [ $I -eq 8 ]
 	then
 		echo 'good luck'
-	fi
-	if [ $I -eq 4 ]
+	elif [ $I -eq 4 ]
 	then
 		echo 'bad luck'
+	else
+		echo 'Best School'
 	fi
-	echo 'Best School'
 	(( I++ ))
 done
