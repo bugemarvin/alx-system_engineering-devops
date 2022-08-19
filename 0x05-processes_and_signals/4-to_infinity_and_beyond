@@ -3,10 +3,8 @@
 # Requirements:
 # In between each iteration of the loop, add a sleep 2
 
-a=1
-while [ a>0 ]
+while true
 do
 	echo "To infinity and beyond"
-	(( a++ ))
 	sleep 2
 done
