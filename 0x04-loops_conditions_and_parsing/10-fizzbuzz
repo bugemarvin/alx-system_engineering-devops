@@ -1,0 +1,21 @@
+#!/usr/bin/env bash
+# Fizzbuzz challenge
+# Displays FizzBuzz when the number is a multiple of 3 and 5
+# Displays Fizz when the number is multiple of 3
+# Displays Buzz when the number is a multiple of 5
+
+for (( I=1 ; I<100 ; I++ ))
+do
+	if (( $I%15 ==  0 ))
+	then
+		echo "FizzBuzz"
+	elif (( $I%5 == 0 ))
+	then
+		echo "Buzz"
+	elif (( $I%3 == 0 ))
+	then
+		echo "Fizz"
+	else
+		echo "$I"
+	fi
+done
