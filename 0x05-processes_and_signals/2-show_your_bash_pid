@@ -4,4 +4,4 @@
 # You cannot use pgrep
 # The third line of your script must be # shellcheck disable=SC2009
 
-ps auf -C bash
+ps aufh -C bash -H
