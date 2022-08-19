@@ -9,13 +9,13 @@
 
 for (( I=1 ; I<100 ; I++))
 do
-	if (( $I%15 ==  0 ))
+	if (( I%15 ==  0 ))
 	then
 		echo "FizzBuzz"
-	elif (( $I%5 == 0 ))
+	elif (( I%5 == 0 ))
 	then
 		echo "Buzz"
-	elif (( $I%3 == 0 ))
+	elif (( I%3 == 0 ))
 	then
 		echo "Fizz"
 	else
