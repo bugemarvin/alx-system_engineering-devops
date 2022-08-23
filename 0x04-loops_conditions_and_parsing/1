@@ -8,10 +8,7 @@
 # Do not display hidden files
 
 LIST="$(ls)"
-for a in $LIST
+for (( a=1; a ; a++ ))
 do
-	if [ $a ]
-	then
-		echo "$a" | cut -d '-' -f2
-	fi
+	echo "$LIST" | cut -d '-' -f2
 done
