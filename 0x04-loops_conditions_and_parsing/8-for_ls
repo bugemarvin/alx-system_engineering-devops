@@ -10,7 +10,7 @@
 LIST="$(ls)"
 for a in $LIST
 do
-	if [ $a ]
+	if [ "$a" ]
 	then
 		echo "$a" | cut -d '-' -f2
 	fi
