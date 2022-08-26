@@ -21,7 +21,6 @@ What is /etc/hosts<br>
 How to display your machine’s active network interfaces<br>
 
 # Requirements
-## General
 Allowed editors: <b>vi</b>, <b>vim</b>, <b>emacs</b><br>
 All your files will be interpreted on Ubuntu 20.04 LTS<br>
 All your files should end with a new line<br>
