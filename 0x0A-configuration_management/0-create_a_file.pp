@@ -7,8 +7,9 @@
 
 file {"school": # creating tmp with school file
     path    => '/tmp/school',
-    content => template('I love Puppet')
+    ensure  => directory,
+    content => 'I love Puppet',
     owner   => 'www-data',
     group   => 'www-data',
-    mode    => 0744,
+    mode    => '0744',
 }
