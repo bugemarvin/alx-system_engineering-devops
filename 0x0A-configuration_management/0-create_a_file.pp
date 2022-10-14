@@ -6,9 +6,9 @@
 # File contains I love Puppet
 
 file {'school': # creating school file
-    path    => '/tmp/school',
-    mode    => '0744',
     ensure  => 'present',
+    mode    => '0744',
+    path    => '/tmp/school',
     owner   => 'www-data',
     group   => 'www-data',
     content => 'I love Puppet',
