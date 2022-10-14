@@ -5,11 +5,10 @@
 # File group is www-data
 # File contains I love Puppet
 
-file {"school": # creating tmp with school file
-    path    => '/tmp/school',
-    ensure  => present,
-    content => 'I love Puppet',
+file {'/tmp/school':
+    mode    => '0744',
+    ensure  => directory,
     owner   => 'www-data',
     group   => 'www-data',
-    mode    => '0744',
+    content => 'I love Puppet',
 }
