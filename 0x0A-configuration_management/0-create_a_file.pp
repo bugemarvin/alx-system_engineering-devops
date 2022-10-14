@@ -5,7 +5,8 @@
 # File group is www-data
 # File contains I love Puppet
 
-file {'/tmp/school':
+file {'school': # creating school file
+    path    => '/tmp/school',
     mode    => '0744',
     ensure  => 'present',
     owner   => 'www-data',
