@@ -5,7 +5,7 @@ file_line {'/etc/ssh/ssh_config':
     line     => 'IdentityFile ~/.ssh/school',\
 }
 file_line {'etc/ssh/ssh_config':
-    ensure  => present,
+    ensure   => present,
     multiple => true,
     line     => 'PasswordAuthentication no',
 }
