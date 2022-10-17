@@ -5,8 +5,5 @@
 # The IP of the server we want to transfer the file to
 # The username scp connects with
 # The path to the SSH private key that scp uses
-if [ ! -z -lt $5 ];
-then
-    scp $1 $2@$3:~/ $4
-fi
+scp $1 $3@$2:
 
