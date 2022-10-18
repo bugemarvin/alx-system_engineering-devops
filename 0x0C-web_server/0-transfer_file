@@ -6,4 +6,5 @@
 # The username scp connects with
 # The path to the SSH private key that scp uses
 # Usage: 0-transfer_file PATH_TO_FILE IP USERNAME PATH_TO_SSH_KEY
-scp $1 $3@$2 -J $4 $5
+scp -i $1 $3@$2:"$4" $5
+
