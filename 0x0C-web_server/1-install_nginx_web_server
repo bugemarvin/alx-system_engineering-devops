@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# script that configures a new Ubuntu machine to install nginx server
+ssh ubuntu@44.197.251.60 'sudo apt install nginx'
+
