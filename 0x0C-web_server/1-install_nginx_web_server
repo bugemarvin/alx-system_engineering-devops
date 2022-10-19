@@ -1,11 +1,11 @@
 #!/usr/bin/env bash
 # script that configures a new Ubuntu machine to install nginx server
-ssh ubuntu@44.197.251.60 'sudo apt-get -y update'
-ssh ubuntu@44.197.251.60 'sudo apt-get -y install nginx'
-ssh ubuntu@44.197.251.60 'echo "Hello World!" >> /var/www/html/index.nginx.debian.html'
-ssh ubuntu@44.197.251.60 'sudo ufw -y enable'
-ssh ubuntu@44.197.251.60 'sudo ufw allow 'Nginx HTTP''
-ssh ubuntu@44.197.251.60 'sudo ufw allow 22/tcp'
-ssh ubuntu@44.197.251.60 'sudo service nginx restart'
-ssh ubuntu@44.197.251.60 'sudo service nginx status'
+sudo apt-get -y update
+sudo apt-get -y install nginx
+echo "Hello World!" >> /var/www/html/index.nginx.debian.html
+sudo ufw -y enable
+sudo ufw allow 'Nginx HTTP'
+sudo ufw allow 22/tcp
+sudo service nginx restart
+sudo service nginx status
 
