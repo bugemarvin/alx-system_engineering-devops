@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # script that configures a new Ubuntu machine to install nginx server
-sudo apt-get -y install nginx --allow-downgrades
+ssh ubuntu@44.197.251.60 'sudo apt-get -y install nginx --allow-downgrades'
 echo "Hello World!" >> /var/www/html/index.nginx-debian.html
 sudo ufw -y enable
 sudo services nginx start
