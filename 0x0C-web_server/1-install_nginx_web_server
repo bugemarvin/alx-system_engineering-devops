@@ -2,7 +2,7 @@
 # script that configures a new Ubuntu machine to install nginx server
 apt-get -y update
 apt-get -y install nginx
-"Hello World!" >> /var/www/html/index.nginx.debian.html
+echo "Hello World!" >> /var/www/html/index.nginx.debian.html
 ufw -y enable
 ufw allow 'Nginx HTTP'
 ufw allow 22/tcp
