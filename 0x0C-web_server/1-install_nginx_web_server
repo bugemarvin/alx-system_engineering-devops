@@ -3,8 +3,6 @@
 apt-get -y update
 apt-get -y install nginx
 echo "Hello World!" > /var/www/html/index.nginx.debian.html
-ufw -y enable
-ufw allow 'Nginx HTTP'
-ufw allow 22/tcp
 service nginx start
 service nginx status
+
