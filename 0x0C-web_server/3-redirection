@@ -2,7 +2,6 @@
 # Redirection of my server
 apt-get -y update
 apt-get -y install nginx
-sudo ufw enable
 sudo ufw allow 'Nginx HTTP'
 sudo chown -R $USER:$USER /var/www
 sudo chmod -R 755 /var/www
