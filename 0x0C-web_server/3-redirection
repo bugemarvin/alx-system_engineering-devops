@@ -5,31 +5,16 @@ apt-get -y install nginx
 sudo ufw allow 'Nginx HTTP'
 sudo chown -R $USER:$USER /var/www
 sudo chmod -R 755 /var/www
-rm -rf * /var/www/html/
+rm -rf /var/www/html/*
 echo "Hello World!" > /var/www/html/index.html
-SERVER_CONFIG=\
-"server {
-    listen 80 default_server;
+printf %s "server {
+    listen 80;
     listen [::]:80 default_server;
-
-    root /var/www/html;
-    index index.html index.htm index.nginx-debian.html;
-
-    server_name _;
-    location / {
-        try_files \$uri \$uri/ =404;
+    root   /etc/nginx/html;
+    index  index.html index.htm;
+    location /redirect_me {
+        return 301 https://modtechy.ke/;
     }
+}" > /etc/nginx/sites-available/default
 
-    if (\$request_filename ~ redirect_me){
-        rewrite ^ https://sketchfab.com/bluepeno/models permanent;
-    }
-}"
-
-bash -c "echo -e '$SERVER_CONFIG' > /etc/nginx/sites-enabled/default"
-
-if [ "$(pgrep -c nginx)" -le 0 ];
-then
-    service nginx start
-else
-    service nginx restart
-fi
+service nginx restart
