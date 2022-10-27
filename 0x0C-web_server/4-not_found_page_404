@@ -9,6 +9,8 @@ chmod -R 755 /var/www/
 rm -rf /var/www/html/*
 echo "Hello World!" > /var/www/html/index.html
 echo "Ceci n'est pas une page" > /var/www/html/404.html
+service nginx start
+service nginx status
 
 printf %s "server {
     listen 80;
