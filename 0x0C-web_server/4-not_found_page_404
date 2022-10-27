@@ -32,4 +32,4 @@ printf %s "server {
     }
 }" > /etc/nginx/sites-available/default
 
-service nginx restart}
+service nginx restart
