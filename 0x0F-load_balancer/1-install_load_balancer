@@ -4,8 +4,7 @@
 apt-get -y update
 apt-get -y install haproxy
 
-printf %s 
-"
+echo "
 # HAproxy Configaration for webserver
 frontend web-frontend
     bind *:80
