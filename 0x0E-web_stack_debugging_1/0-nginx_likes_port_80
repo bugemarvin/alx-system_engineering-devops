@@ -6,3 +6,4 @@ ln -s /etc/nginx/sites-available/default /etc/nginx/sites-enabled/default
 service nginx stop
 service nginx start
 service nginx status
+ufw reload
