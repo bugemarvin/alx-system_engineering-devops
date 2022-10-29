@@ -4,16 +4,15 @@
 apt-get -y update
 apt-get -y install haproxy
 
-echo "
-# HAproxy Configaration for webserver
-frontend web-frontend
-    bind *:80
-    mode http
-    default_backend web-backend
-backend web-backend
-    balance roundrobin
-    server 47046-web-01 44.197.251.60 check port 80
-    server 47046-web-02 54.158.217.227 check port 80
+echo "# HAproxy Configaration for webserver\n
+    frontend web-frontend\n
+        \tbind *:80\n
+        \tmode http\n
+        \tdefault_backend web-backend\n
+    backend web-backend\n
+        \tbalance roundrobin\n
+        \tserver 47046-web-01 44.197.251.60 check port 80\n
+        \tserver 47046-web-02 54.158.217.227 check port 80
 " >> /etc/haproxy/haproxy.cfg
 haproxy -c -f /etc/haproxy/haproxy.cfg
 service haproxy start
