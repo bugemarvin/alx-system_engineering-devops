@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+# fixing port 80 connection issues in nginx
+
+rm -rf /etc/nginx/sites-enabled/*
+ln -s /etc/nginx/sites-available/default /etc/nginx/sites-enabled/default
+service nginx stop
+service nginx start
+service nginx status
