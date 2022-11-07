@@ -1,15 +1,15 @@
 #!/usr/bin/env bash
 # installing ufw in the load balancer
-
 apt-get -y update
 apt-get -y install ufw
 ufw enable
 ufw default deny incoming
 ufw allow 22/tcp
-ufw allow ssh
 ufw allow 22
 ufw allow 443
+ufw allow "Nginx HTTPS"
 ufw 80
 ufw default allow outgoing
 ufw status
 ufw reload
+ufw status
