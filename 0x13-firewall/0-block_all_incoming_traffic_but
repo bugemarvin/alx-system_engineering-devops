@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+# installing ufw in the load balancer
+
+apt-get -y update
+apt-get -y install ufw
+ufw enable
+ufw allow 22/tcp
+ufw allow 22
+ufw allow 443
+ufw 80
+ufw status
+ufw reload
