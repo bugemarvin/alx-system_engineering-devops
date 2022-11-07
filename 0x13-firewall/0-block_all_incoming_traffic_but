@@ -4,9 +4,12 @@
 apt-get -y update
 apt-get -y install ufw
 ufw enable
+ufw default deny incoming
 ufw allow 22/tcp
+ufw allow ssh
 ufw allow 22
 ufw allow 443
 ufw 80
+ufw default allow outgoing
 ufw status
 ufw reload
