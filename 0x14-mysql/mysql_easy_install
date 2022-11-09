@@ -1,0 +1,32 @@
+#!/usr/bin/env bash
+# Installign mysql ver 5.7.* specifically
+
+echo "\
+deb http://repo.mysql.com/apt/ubuntu/ bionic mysql-apt-config
+deb http://repo.mysql.com/apt/ubuntu/ bionic mysql-5.7
+deb http://repo.mysql.com/apt/ubuntu/ bionic mysql-tools
+deb-src http://repo.mysql.com/apt/ubuntu/ bionic mysql-5.7
+" > /etc/apt/sources.list.d/mysql.list
+
+# avoing to upgarde 
+echo "\
+Package: mysql-server
+Pin: version 5.7.*
+Pin-Priority: 1001
+
+Package: mysql-client
+Pin: version 5.7.*
+Pin-Priority: 1001
+
+Package: mysql-community-server
+Pin: version 5.7.*
+Pin-Priority: 1001
+
+Package: mysql-community-client
+Pin: version 5.7.*
+Pin-Priority: 1001
+" > /etc/apt/preferences.d/mysql
+
+apt-get update
+# install
+apt-get install mysql-client mysql-server

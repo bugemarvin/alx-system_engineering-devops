@@ -6,6 +6,7 @@ wget https://dev.mysql.com/get/mysql-apt-config_0.8.12-1_all.deb
 if [ -e "mysql-apt-config_0.8.12-1_all.deb" ];
 then
     dpkg -i mysql-apt-config_0.8.12-1_all.deb
+    apt-get install graphviz
     apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 467B942D3A79BD29
     apt-get -y update
     apt-cache policy mysql-server
