@@ -1,6 +1,13 @@
 #!/usr/bin/env bash
 # installing mysql on the server
 
+apt-get -y install dpkg
+wget https://dev.mysql.com/get/mysql-apt-config_0.8.12-1_all.deb
+dpkg -i mysql-apt-config_0.8.12-1_all.deb
+apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 467B942D3A79BD29
 apt-get -y update
-apt-get -y install mysql-server
-mysql --version
+apt-cache policy mysql-server
+apt install -f mysql-client=5.7* mysql-community-server=5.7* mysql-server=5.7*
+mysql_secure_installation # press any number to not use password
+mysql -u root -p
+# SELECT VERSION(); to be used inside the mysql server
