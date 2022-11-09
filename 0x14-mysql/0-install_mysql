@@ -3,12 +3,17 @@
 
 apt-get -y install dpkg
 wget https://dev.mysql.com/get/mysql-apt-config_0.8.12-1_all.deb
-dpkg -i mysql-apt-config_0.8.12-1_all.deb
-apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 467B942D3A79BD29
-apt-get -y update
-apt-cache policy mysql-server
-apt install -f mysql-client=5.7* mysql-community-server=5.7* mysql-server=5.7*
-mysql_secure_installation # press any number to not use password
-mysql -u root -p
+if [ -e "mysql-apt-config_0.8.12-1_all.deb" ];
+then
+    dpkg -i mysql-apt-config_0.8.12-1_all.deb
+    apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 467B942D3A79BD29
+    apt-get -y update
+    apt-cache policy mysql-server
+    apt install -f mysql-client=5.7* mysql-community-server=5.7* mysql-server=5.7*
+    mysql_secure_installation # press any number to not use password
+    mysql -u root -p
+else
+    exit
+fi
 # SELECT VERSION(); to be used inside the mysql server
 # ssh-copy-id -i school.pub ubuntu@my_ipaddress (To be done from where the school.pub is located in order to push to server (web-02) location)
