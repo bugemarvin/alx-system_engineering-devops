@@ -11,3 +11,4 @@ apt install -f mysql-client=5.7* mysql-community-server=5.7* mysql-server=5.7*
 mysql_secure_installation # press any number to not use password
 mysql -u root -p
 # SELECT VERSION(); to be used inside the mysql server
+# ssh-copy-id -i school.pub ubuntu@my_ipaddress (To be done from where the school.pub is located in order to push to server (web-02) location)
