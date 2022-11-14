@@ -1,26 +1,24 @@
 # install nginx and served by
-exce { 'update':
-  ensure   => present,
+
+exec { 'update':
   provider => 'shell',
   before   => Exec['nginx'],
   command  => 'sudo apt -y update',
 }
 
-exce {'nginx':
-  ensure   => present,
+exec {'nginx':
   provider => 'shell',
   command  => 'sudo apt -y install nginx',
-  before   => Exec['Config_header'],
+  before   => Exec['config'],
 }
 
-file_line {'Config_header':
-  ensure  => present,
-  path    => 'etc/nginx/sites-available/default',
-  listen  => 'add_header X-Served-By $Hostname;',
-  requier => Package['nginx'],
+exec {'config':
+  command  => 'sudo sed -i s@"http {"@"http {\n\tadd_header X-Served-By \$HOSTNAME;"@g /etc/nginx/nginx.conf',
+  provider => 'shell',
+  before   => Exec['restart'],
 }
 
-service {'nginx':
-  ensure  => running,
-  requier => Package['nginx'],
+exec {'restart':
+  provider => 'shell',
+  command  => 'sudo service nginx restart',
 }
