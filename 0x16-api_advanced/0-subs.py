@@ -1,15 +1,12 @@
 #!/usr.bin/python3
 '''function to return the number of Reddit API subscribers
 '''
-
-
 import requests
 import json
 
 
 def number_of_subscribers(subreddit):
-    '''
-    find number of subscribers from reddit.
+    '''find number of subscribers from reddit.
     No authentication requiered
     constrains:
     not active users, total subscribers for a given subreddit.
