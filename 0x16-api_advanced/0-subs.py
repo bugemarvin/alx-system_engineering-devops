@@ -1,5 +1,5 @@
 #!/usr.bin/python3
-"""Return the number of Reddit API subscribers"""
+# Return the number of Reddit API subscribers
 import requests
 import json
 
