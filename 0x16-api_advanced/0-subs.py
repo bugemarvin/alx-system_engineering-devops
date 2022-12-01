@@ -1,14 +1,25 @@
 #!/usr.bin/python3
-# Return the number of Reddit API subscribers
+"""Return the number of Reddit API subscribers"""
 import requests
 import json
 
 
 def number_of_subscribers(subreddit):
-    """
-        find number of subscribers from reddit.
-        if invalid subreddit return 0
-        avoid redirects add a User-Agent
+    """Find number of subscribers from reddit.
+        If invalid subreddit return 0
+
+        Parameters
+        ----------
+        subredit: [location]
+                The location as call to about subscribers
+
+        Returns
+        -------
+        Integer
+                if subscribers:
+                        number of subscribers for a valid group in reddit
+                else:
+                        Zero for invalid reddit group
     """
     URL = 'https://www.reddit.com/'
     headers = {
