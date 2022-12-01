@@ -1,25 +1,7 @@
-# Setup New Ubuntu server with nginx
-
-exec { 'update system':
-    command => '/usr/bin/apt-get update',
-}
+# install nginx server
+# must be served at port 80
 
 package { 'nginx':
-    ensure  => 'installed',
-    require => Exec['update system']
-}
-
-file {'/var/www/html/index.html':
-    content => 'Hello World!'
-}
-
-exec {'redirect_me':
-    command  => 'sed -i "24i\    rewrite ^/redirect_me https://modtechy.ke/; permanent\
-    ;" /etc/nginx/sites-available/default',
-    provider => 'shell'
-}
-
-service {'nginx':
-    ensure  => running,
-    require => Package['nginx']
+    ensure      => installed,
+    port => 80,
 }
