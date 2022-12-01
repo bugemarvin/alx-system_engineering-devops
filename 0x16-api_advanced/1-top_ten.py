@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 '''
-function that queries the Reddit API and prints the titles of the first 10 hot posts
+function that queries the Reddit API
+prints the titles of the first 10 hot posts
 '''
 import requests
 
@@ -24,8 +25,8 @@ def top_ten(subreddit):
     '''
     url = 'https://www.reddit.com/'
     headers = {
-        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; rv:91.0) Gecko/20100101 Firefox/91.0'
-    }
+        'User-Agent':
+        'Mozilla/5.0 (Windows NT 10.0; rv:91.0) Gecko/20100101 Firefox/91.0'}
 
     res = requests.get('{}/r/{}/hot/.json'.format(url,
                                                   subreddit), headers=headers,
