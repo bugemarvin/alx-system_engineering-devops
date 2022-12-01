@@ -5,7 +5,7 @@ import requests
 import json
 
 
-URL = "https://www.reddit.com/"
+URL = 'https://www.reddit.com/'
 '''Calling reddit website
 '''
 
