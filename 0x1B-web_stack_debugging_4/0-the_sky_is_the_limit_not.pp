@@ -3,23 +3,22 @@
 exec {'update':
   provider => shell,
   command  => 'sudo apt-get -y update',
-  before   => Package['nginx'],
+  before   => Exec['nginx'],
 }
 
 exec {'nginx':
   provider => shell,
-  command  => 'sudo apt-get -y install nginx'
+  command  => 'sudo apt-get -y install nginx',
   before   => Service['nginx'],
 }
 
 service {'nginx':
-  ensure  => running,
-  enable  => true,
-  require => Package['nginx'],
-  before  => File['/etc/default/nginx'],
+  ensure => running,
+  enable => true,
+  before => Exec['/etc/default/nginx'],
 }
 
 exec {'/etc/default/nginx':
-  command  => 'sudo echo "ulimit -n 15 -n 4096" | sudo tee -a /etc/default/nginx; sudo service nginx restart',
+  command  => 'sudo echo "ulimit -n 4096" | sudo tee -a /etc/default/nginx; sudo service nginx restart',
   provider => shell,
 }
