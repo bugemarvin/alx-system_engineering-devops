@@ -19,7 +19,7 @@ service {'nginx':
 }
 
 exec {'/etc/default/nginx':
-  command  => 'echo "ulimit -n 4096" | tee -a /etc/default/nginx;',
+  command  => 'echo "ULIMIT=\"-n 15\"\nulimit -n 4096" | tee -a /etc/default/nginx;',
   provider => shell,
   before   => Exec['nginx_restart'],
 }
