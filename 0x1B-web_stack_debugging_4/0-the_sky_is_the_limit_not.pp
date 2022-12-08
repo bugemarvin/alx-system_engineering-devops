@@ -2,13 +2,13 @@
 
 exec {'update':
   provider => shell,
-  command  => 'sudo apt-get -y update',
+  command  => 'apt-get -y update',
   before   => Exec['nginx'],
 }
 
 exec {'nginx':
   provider => shell,
-  command  => 'sudo apt-get -y install nginx',
+  command  => 'apt-get -y install nginx',
   before   => Service['nginx'],
 }
 
@@ -19,7 +19,12 @@ service {'nginx':
 }
 
 exec {'/etc/default/nginx':
-  command  => 'sudo echo "ULIMIT=\"-n 15\"\nulimit -n 4096" | sudo tee -a /etc/default/nginx; sudo service nginx restart',
+  command  => 'echo "ulimit -n 4096" | tee -a /etc/default/nginx;',
   provider => shell,
+  before   => Exec['nginx_restart'],
 }
 
+exec {'nginx_restart':
+  command  => 'service nginx restart',
+  provider => shell,
+}
