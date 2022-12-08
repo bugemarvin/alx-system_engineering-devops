@@ -20,6 +20,6 @@ service {'nginx':
 }
 
 exec {'/etc/default/nginx':
-  command  => 'sudo echo "ulimit -n 1048576" | sudo tee -a /etc/default/nginx; sudo service restart',
+  command  => 'sudo echo "ulimit -n 1048576" | sudo tee -a /etc/default/nginx; sudo service nginx restart',
   provider => shell,
 }
