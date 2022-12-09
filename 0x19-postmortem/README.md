@@ -1,6 +1,6 @@
 # Nginx web server outage incident report
 
-The following incident report is based on webstack_debbging_0, three days ago an incident occurred that resulted in an outage. Today we will be providing an incident report in regards to nginx web server outage that occurred on 5th December 2022.
+The following incident report is based on <a href="https://github.com/bugemarvin/alx-system_engineering-devops/blob/master/0x0D-web_stack_debugging_0/README.md">webstack_debbging_0</a>, three days ago an incident occurred that resulted in an outage. Today we will be providing an incident report in regards to nginx web server outage that occurred on 5th December 2022.
 
 Please find below summary by Marvin Kurland
 
