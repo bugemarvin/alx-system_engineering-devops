@@ -1,4 +1,4 @@
-# Nginx web server outage incident report
+<h1 align="center">Nginx web server outage incident report </h1>
 
 The following incident report is based on <a href="https://github.com/bugemarvin/alx-system_engineering-devops/blob/master/0x0D-web_stack_debugging_0/README.md">webstack_debbging_0</a>, three days ago an incident occurred that resulted in an outage. Today we will be providing an incident report in regards to nginx web server outage that occurred on 5th December 2022.
 
@@ -10,12 +10,12 @@ From 11:46 AM to 12:20 PM  EAT, a request to nginx web server failed on port 80,
 
 ### Timeline (all times East Africa Time)
 
-11:36 AM EAT: Nginx Configuration push starts
-11:46 AM EAT: Beginning Outage
-11:46 AM EAT: Get request failed
-11:50 AM EAT: Alerted by User
-11:58 AM EAT: Failed Configuration fixed
-12:05 PM EAT: Nginx server Restart
+11:36 AM EAT: Nginx Configuration push starts\
+11:46 AM EAT: Beginning Outage\
+11:46 AM EAT: Get request failed\
+11:50 AM EAT: Alerted by User\
+11:58 AM EAT: Failed Configuration fixed\
+12:05 PM EAT: Nginx server Restart\
 12:20 PM EAT: status 200 for all requests. 
 
 ### Root Cause
