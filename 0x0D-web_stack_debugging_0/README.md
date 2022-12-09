@@ -1,4 +1,4 @@
-# Web stack debugging #0
+<h1 align="center">Web stack debugging #0</h1>
 
 ## Requirements
 ### General
