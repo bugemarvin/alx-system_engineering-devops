@@ -1,11 +1,15 @@
 <h1 align="center">Nginx web server outage incident report </h1>
 
+<img alt="drawing" style="width:100%;height:320px;" src="https://github.com/bugemarvin/alx-system_engineering-devops/blob/master/0x19-postmortem/postmt.png" />
+
 The following incident report is based on <a href="https://github.com/bugemarvin/alx-system_engineering-devops/blob/master/0x0D-web_stack_debugging_0/README.md">webstack_debbging_0</a>, three days ago an incident occurred that resulted in an outage. Today we will be providing an incident report in regards to nginx web server outage that occurred on 5th December 2022.
 
 Please find below summary by Marvin Kurland\
 Attached report <a href="https://docs.google.com/document/d/1hjxHD3vorEpkQZ7wVLA8D0upO_coRysT6DGUzhu8EP8/edit?usp=sharing">Report</a>
 
-## Issue Summary
+## <p align="center"> Issue Summary </p>
+
+<img src="https://github.com/bugemarvin/alx-system_engineering-devops/blob/master/0x19-postmortem/QA1.png" alt="Image" style="width:100%;height:320px;" />
  
 From 11:46 AM to 12:20 PM  EAT, a request to nginx web server failed on port 80, thus resulting in an empty response message 204. The Websites that rely on nginx application web servers were not able to spin up it’s content which resulted to empty responses 
 
@@ -19,12 +23,16 @@ From 11:46 AM to 12:20 PM  EAT, a request to nginx web server failed on port 80,
 12:05 PM EAT: Nginx server Restart\
 12:20 PM EAT: status 200 for all requests. 
 
-### Root Cause
+### <p align="center"> Root Cause</p>
+
+<img style="height:260px;width:100%" src="https://github.com/bugemarvin/alx-system_engineering-devops/blob/master/0x19-postmortem/postmt1.png" />
 
 At 11:36 AM EAT, a configuration change was made to the nginx configuration file to include a subdomain, thus leading to a bug in the configuration file. Which resulted in a change of port 80 in default configuration file for nginx config file causing an outage at 11:46 AM EAT. After being notified at 11:50 AM EAT, an internal test was done and a read through the config files was done and full stop was majorly the leading cause of an empty response with status code 204.
 
 
-### Resolution
+### <p align="center"> Resolution </p>
+
+<img alt="Image" style="height:260px;width:100%" src="https://github.com/bugemarvin/alx-system_engineering-devops/blob/master/0x19-postmortem/fix%20it.png" />
 
 At 11:58 AM EAT the changes made to the configuration file were fixed and it was ensured that all bugs were fixed, by 12:05 PM EAT nginx server was restarted and by 12:20 PM EAT all content was being served.
 Corrective and preventive measures
