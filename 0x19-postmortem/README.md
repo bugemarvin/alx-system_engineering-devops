@@ -8,8 +8,9 @@ Please find below summary by Marvin Kurland\
 Attached report <a href="https://docs.google.com/document/d/1hjxHD3vorEpkQZ7wVLA8D0upO_coRysT6DGUzhu8EP8/edit?usp=sharing">Report</a>
 
 ## <p align="center"> Issue Summary </p>
-
-<img src="https://github.com/bugemarvin/alx-system_engineering-devops/blob/master/0x19-postmortem/QA1.png" alt="Image" style="width:100%;height:320px;" />
+<div align="center">
+<img src="https://github.com/bugemarvin/alx-system_engineering-devops/blob/master/0x19-postmortem/QA1.png" alt="Image" style="width:55%;height:290px;" />
+</div>
  
 From 11:46 AM to 12:20 PM  EAT, a request to nginx web server failed on port 80, thus resulting in an empty response message 204. The Websites that rely on nginx application web servers were not able to spin up it’s content which resulted to empty responses 
 
@@ -24,15 +25,17 @@ From 11:46 AM to 12:20 PM  EAT, a request to nginx web server failed on port 80,
 12:20 PM EAT: status 200 for all requests. 
 
 ### <p align="center"> Root Cause</p>
-
-<img style="height:260px;width:100%" src="https://github.com/bugemarvin/alx-system_engineering-devops/blob/master/0x19-postmortem/postmt1.png" />
+<div align="center">
+<img style="height:290px;width:55%" src="https://github.com/bugemarvin/alx-system_engineering-devops/blob/master/0x19-postmortem/postmt1.png" />
+</div>
 
 At 11:36 AM EAT, a configuration change was made to the nginx configuration file to include a subdomain, thus leading to a bug in the configuration file. Which resulted in a change of port 80 in default configuration file for nginx config file causing an outage at 11:46 AM EAT. After being notified at 11:50 AM EAT, an internal test was done and a read through the config files was done and full stop was majorly the leading cause of an empty response with status code 204.
 
 
 ### <p align="center"> Resolution </p>
-
-<img alt="Image" style="height: 290px;width: 40%;display: block;float: right;margin-left: 11px;" src="https://github.com/bugemarvin/alx-system_engineering-devops/blob/master/0x19-postmortem/fix%20it.png" />
+<div align="center">
+<img alt="Image" style="height: 290px;width: 55%;" src="https://github.com/bugemarvin/alx-system_engineering-devops/blob/master/0x19-postmortem/fix%20it.png" />
+</div>
 
 At 11:58 AM EAT the changes made to the configuration file were fixed and it was ensured that all bugs were fixed, by 12:05 PM EAT nginx server was restarted and by 12:20 PM EAT all content was being served.
 Corrective and preventive measures
