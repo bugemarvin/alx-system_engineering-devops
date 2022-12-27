@@ -32,7 +32,7 @@ At 11:36 AM EAT, a configuration change was made to the nginx configuration file
 
 ### <p align="center"> Resolution </p>
 
-<img alt="Image" style="height:260px;width:100%" src="https://github.com/bugemarvin/alx-system_engineering-devops/blob/master/0x19-postmortem/fix%20it.png" />
+<img alt="Image" style="height:290px;width:40%;display:block;float:right;" src="https://github.com/bugemarvin/alx-system_engineering-devops/blob/master/0x19-postmortem/fix%20it.png" />
 
 At 11:58 AM EAT the changes made to the configuration file were fixed and it was ensured that all bugs were fixed, by 12:05 PM EAT nginx server was restarted and by 12:20 PM EAT all content was being served.
 Corrective and preventive measures
