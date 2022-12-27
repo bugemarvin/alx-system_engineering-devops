@@ -7,7 +7,7 @@ The following incident report is based on <a href="https://github.com/bugemarvin
 Please find below summary by Marvin Kurland\
 Attached report <a href="https://docs.google.com/document/d/1hjxHD3vorEpkQZ7wVLA8D0upO_coRysT6DGUzhu8EP8/edit?usp=sharing">Report</a>
 
-## <p align="center"> Issue Summary </p>
+### <p align="center"> Issue Summary </p>
 <div align="center">
 <img src="https://github.com/bugemarvin/alx-system_engineering-devops/blob/master/0x19-postmortem/QA1.png" alt="Image" style="width:55%;height:290px;" />
 </div>
