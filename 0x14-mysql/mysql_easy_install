@@ -6,9 +6,9 @@ deb http://repo.mysql.com/apt/ubuntu/ bionic mysql-apt-config
 deb http://repo.mysql.com/apt/ubuntu/ bionic mysql-5.7
 deb http://repo.mysql.com/apt/ubuntu/ bionic mysql-tools
 deb-src http://repo.mysql.com/apt/ubuntu/ bionic mysql-5.7
-" > /etc/apt/sources.list.d/mysql.list
+" | tee -a /etc/apt/sources.list.d/mysql.list
 
-# avoing to upgarde 
+# to avoid being upgraded to a highr version 
 echo "\
 Package: mysql-server
 Pin: version 5.7.*
@@ -25,7 +25,7 @@ Pin-Priority: 1001
 Package: mysql-community-client
 Pin: version 5.7.*
 Pin-Priority: 1001
-" > /etc/apt/preferences.d/mysql
+" | tee -a /etc/apt/preferences.d/mysql
 
 apt-get update
 # install
